@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: {
+    host: 'http://backend.tet.local',
+    resources: {
+      currency_list: 'api/v1/currency/list',
+      currency: 'api/v1/currency/{id}',
+    }
+  }
 };
 
 /*
