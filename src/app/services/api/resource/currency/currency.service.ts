@@ -1,59 +1,54 @@
 import { Injectable } from '@angular/core';
 import { BaseService } from '../../base.service';
-import { ListResponse } from './list-response';
+import { CurrencyResponse } from './currency-response';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListService extends BaseService {
-  /**
-   * Page param
-   *
-   * @protected
-   */
-  protected page = 1;
+export class CurrencyService extends BaseService {
 
   /**
-   * Get params
-   *
+   * @protected
+   */
+  protected currencyId;
+
+  /**
    * @protected
    */
   protected getApiParams() {
-    return {
-      page: this.page
-    }
+    return {}
   }
 
   /**
-   * Get API path resource string
-   *
    * @protected
    */
   protected getApiResource(): string {
-    return 'currency_list';
+    return 'currency';
   }
 
   /**
-   * Typehint response type
+   * Get API data
    */
-  getData(): Observable<ListResponse> {
+  public getData(): Observable<CurrencyResponse> {
     return super.getData();
   }
 
   /**
-   * Set page
+   * Currency ID setter
    *
-   * @param page
+   * @param value
    */
-  public setPage(page: number) {
-    this.page = page;
+  public setCurrencyId(value) {
+    this.currencyId = value;
   }
 
   /**
    * @protected
    */
   protected getUrlArgs() {
-    return {}
+    return {
+      id: this.currencyId
+    }
   }
 }

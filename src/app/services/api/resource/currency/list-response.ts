@@ -1,4 +1,6 @@
-export class Response {
+import { Currency, ExchangeRate } from './currency';
+
+export class ListResponse {
   items: [Item];
   page_info: PageInfo
 }
@@ -11,13 +13,6 @@ export class PageInfo {
 }
 
 class Item {
-  currency: {
-    id: number,
-    code: string
-  };
-
-  exchange_rate: {
-    date: string,
-    rate: number
-  }
+  currency: Currency;
+  exchange_rate: ExchangeRate;
 }

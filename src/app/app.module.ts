@@ -16,7 +16,7 @@ import { CurrencyComponent } from './components/currency/currency/currency.compo
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatTableModule,
     HttpClientModule,
     MatPaginatorModule,
-    MatIconModule
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

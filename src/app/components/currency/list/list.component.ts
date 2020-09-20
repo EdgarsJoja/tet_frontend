@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListService } from '../../../services/api/resource/currency/list.service';
-import { PageInfo } from '../../../services/api/resource/currency/response';
+import { PageInfo } from '../../../services/api/resource/currency/list-response';
 
 @Component({
   selector: 'app-list',
