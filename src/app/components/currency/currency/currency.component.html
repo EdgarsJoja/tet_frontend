@@ -1,4 +1,4 @@
-<div *ngIf="currency">
+<div *ngIf="currency" class="fade-in">
   <h2>Currency: {{ currency.code }}</h2>
 
   <mat-list class="mat-elevation-z4">
@@ -9,6 +9,6 @@
   </mat-list>
 </div>
 
-<div *ngIf="!currency">
+<div *ngIf="!currency" class="fade-in">
   <mat-spinner class="center-horizontal"></mat-spinner>
 </div>
