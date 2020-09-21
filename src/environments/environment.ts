@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   api: {
-    host: 'http://backend.tet.local',
+    host: 'http://localhost',
     resources: {
       currency_list: 'api/v1/currency/list',
       currency: 'api/v1/currency/{id}',
